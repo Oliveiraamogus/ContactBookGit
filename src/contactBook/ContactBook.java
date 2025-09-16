@@ -93,4 +93,15 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
+    public boolean existsPhoneWithNumber(int phone) {
+        return false;
+    }
+
+    public Contact getName(int phone) {
+        return null;
+    }
+
+    public boolean existSamePhones() {
+        return false;
+    }
 }

@@ -162,13 +162,10 @@ public class Main {
     private static void getPhoneByNumber(Scanner in, ContactBook cBook) {
         int phone;
         phone =  in.nextInt(); in.nextLine();
-        if (cBook.getNumberOfContacts() != 0) {
-            if (cBook.existsPhoneWithNumber(phone)) {
-                System.out.println(cBook.getName(phone).getName());
-            }
-            else System.out.println(PHONE_NOT_EXISTS);
+        if (cBook.existsPhoneWithNumber(phone)) {
+            System.out.println(cBook.getContactByPhone(phone).getName());
         }
-        else System.out.println(BOOK_EMPTY);
+        else System.out.println(PHONE_NOT_EXISTS);
     }
 
     private static void existSamePhones(Scanner in, ContactBook cBook) {

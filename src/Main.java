@@ -62,7 +62,7 @@ public class Main {
                     getPhoneByNumber(in, cBook);
                     break;
                 case SAME_NUMBER:
-                    existSamePhones(in, cBook);
+                    existSamePhones(cBook);
                     break;
                 default:
                     System.out.println(COMMAND_ERROR);
@@ -168,7 +168,7 @@ public class Main {
         else System.out.println(PHONE_NOT_EXISTS);
     }
 
-    private static void existSamePhones(Scanner in, ContactBook cBook) {
+    private static void existSamePhones(ContactBook cBook) {
         if (cBook.existSamePhones()) {
             System.out.println(SAME_PHONES);
         }
